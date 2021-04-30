@@ -1,0 +1,6 @@
+b1 : git clone (sao chép địa chỉ github)
+b2 : git add . (add file )
+b3 : git commit -m (tạo ra snapshot ghi nhận thay đổi)(-m là để comment)
+b4 : git push (đẩy lên github)
+
+link github new: https://github.com/hoangbao1122/my_new_project
