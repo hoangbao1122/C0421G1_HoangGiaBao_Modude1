@@ -8,20 +8,23 @@
     h2{
         font-family : "Adobe Devanagari";
     }
+    span{
+        color: red;
+    }
 </style>
 <body>
 <h1>Oder form</h1>
-<h2> what would you like to buy</h2>
-<select name="" id="" size="" >
+<h2> what would you like to buy ?</h2>
+<select name="" id="" size="" style="width: 200px">
     <option value="" size="10">A</option>
     <option value="">B</option>
     <option value="">C</option>
 </select>
 <h2>would you like to buy</h2>
-<input type="checkbox">1$<br/>
-<input type="checkbox">2$<br/>
-<input type="checkbox">3$<br/>
-<h2>Name</h2>
+<input type="radio" name="money">1$<br/>
+<input type="radio" name="money">2$<br/>
+<input type="radio" name="money">3$<br/>
+<h2>Name <span>*</span></h2>
 <input type="text" placeholder="first name">
 <input type="text" placeholder="last name" >
 <h2>Email</h2>
@@ -30,7 +33,7 @@
 <input type="text" size="5"> -
 <input type="text" size="5"> -
 <input type="text" size="5"> -
-
+<br/><br>
 <button>Submit</button><br/>
 
 
