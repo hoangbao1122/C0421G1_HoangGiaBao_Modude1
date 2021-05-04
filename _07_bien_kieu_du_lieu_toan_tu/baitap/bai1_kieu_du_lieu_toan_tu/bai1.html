@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Điểm Trung Bình</h1>
+<script>
+    let li;
+    let hoa;
+    let sinh;
+
+
+
+    li = prompt("nhập điểm môn lí");
+    hoa = prompt("nhập điểm môn hóa");
+    sinh = prompt("nhập điểm môn sinh");
+    let vatLi = parseInt(li);
+    let hocHoc = parseInt(hoa);
+    let sinhHoc = parseInt(sinh);
+
+    diemTrungBinh = (vatLi  +  hocHoc + sinhHoc) / 3 ;
+    document.write("Điểm vật lí = " + vatLi);
+    document.write("<br/>")
+
+    document.write("Điểm  hóa = " + hocHoc);
+    document.write("<br/>");
+
+    document.write("Điểm  sinh = " + sinhHoc);
+    document.write("<br/>");
+
+    document.write("điểm trung bình = " + diemTrungBinh);
+</script>
+</body>
+</html>
