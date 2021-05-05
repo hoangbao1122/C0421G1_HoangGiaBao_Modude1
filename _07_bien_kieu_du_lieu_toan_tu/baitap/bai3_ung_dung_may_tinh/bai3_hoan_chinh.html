@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: auto;
+
+    }
+    body{
+        background: #3f5efb;
+        background-image:url("nen.jpg") ;
+    }
+    .container{
+        width: 450px;
+        height: 402px;
+        background: #C0C0C0;
+        background-image:url("nen2.jpg") ;
+        border-radius: 15px;
+    }
+    table{
+        margin-top: 100px;
+        width: 450px;
+        height: 300px;
+
+
+    }
+    tr{
+        border-radius: 10px;
+    }
+    #output{
+        border-radius: 8px;
+    }
+
+    th{
+        width: 50px;
+        height: 67px;
+         }
+    th input{
+        padding: 20px;
+        border-radius: 8px;
+        width: 50px;
+        height: 50px;
+    }
+    th input:hover{
+        background: #3f5efb;
+    }
+    #dauCong{
+        border-radius: 10px;
+        background: #22c1c3;
+    }
+    #dauchu{
+        border-radius: 10px;
+        background: #b7bd5d;
+    }
+    #dauNhan{
+        border-radius: 10px;
+        background: #fdbb2d;
+    }
+    #dauChia{
+        border-radius: 10px;
+        background: wheat;
+    }
+    #dauBang{
+        border-radius: 10px;
+        background: #3f5efb;
+    }
+</style>
+<body>
+<div class="container">
+<table>
+    <tr>
+        <td colspan="4"><input type="text" style="width: 98%;height: 30px" id="output"></td>
+    </tr>
+    <tr>
+        <th><input type="button" value="C"></th>
+        <th><input type="button" value="CE"></th>
+        <th><input type="button" value="%"></th>
+        <th><input type="button" value="+" id="dauCong"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="7"></th>
+        <th><input type="button" value="8"></th>
+        <th><input type="button" value="9"></th>
+        <th><input type="button" value="-" id="dauchu"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="4"></th>
+        <th><input type="button" value="5"></th>
+        <th><input type="button" value="6"></th>
+        <th><input type="button" value="*" id="dauNhan"></th>
+    </tr>
+    <tr>
+        <th><input type="button" value="1"></th>
+        <th><input type="button" value="2"></th>
+        <th><input type="button" value="3"></th>
+        <th><input type="button" value="/" id="dauChia"></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th><input type="button" value="0"></th>
+        <th></th>
+        <th><input type="button" value="=" id="dauBang"></th>
+    </tr>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Máy Tính</h1>
+<input type="text" id="so1">
+<input type="text" id="so2"><br/><br/>
+<button onclick="cong()">Cộng</button>
+<button onclick="tru()">Trừ</button>
+<button onclick="nhan()">Nhân</button>
+<button onclick="chia()">Chia</button>
+<div class="view"></div>
+<script>
+    function cong() {
+        let a = document.querySelector("#so1").value;
+        let b = document.querySelector("#so2").value;
+
+
+
+        sonNguyena = parseInt(a);
+        sonNguyenb = parseInt(b);
+
+        c = sonNguyena + sonNguyenb;
+        document.querySelector(".view").innerHTML = c;
+
+    }
+    function tru() {
+        let a = document.querySelector("#so1").value;
+        let b = document.querySelector("#so2").value;
+
+
+
+        sonNguyena = parseInt(a);
+        sonNguyenb = parseInt(b);
+
+        c = sonNguyena - sonNguyenb;
+        document.querySelector(".view").innerHTML = c;
+    }
+    function nhan() {
+        let a = document.querySelector("#so1").value;
+        let b = document.querySelector("#so2").value;
+
+
+
+        sonNguyena = parseInt(a);
+        sonNguyenb = parseInt(b);
+
+        c = sonNguyena * sonNguyenb;
+        document.querySelector(".view").innerHTML = c;
+    }
+    function chia() {
+        let a = document.querySelector("#so1").value;
+        let b = document.querySelector("#so2").value;
+
+
+
+        sonNguyena = parseInt(a);
+        sonNguyenb = parseInt(b);
+
+        c = sonNguyena % sonNguyenb;
+        document.querySelector(".view").innerHTML = c;
+    }
+</script>
+</body>
+</html>

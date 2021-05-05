@@ -11,28 +11,39 @@
 </style>
 <body>
 <form action="">
-    <label for="" id="tienBanDau">Số Tiền</label>
-    <input type="text">
+    <label for="">Số Tiền</label>
+    <input type="text" id="tienBanDau">
     <label for="">Loại Tiền</label>
 
 
     <select name="" id="">
-    <option value="vietnam">Việt nam</option>
-    <option value="mi">Mĩ</option><br/>
+    <option value="vietnam" id="tienViet">Mĩ</option>
+    <option value="mi" id="tienMi">Việt Nam</option><br/>
     </select>
 
     <label for="">Loại Tiền muốn chuyển</label>
 
     <select name="" id="">
-        <option value="">Mĩ</option>
-        <option value="">Việt Nam</option>
+        <option value="vietnam">Việt Nam</option>
+        <option value="mi">Mĩ</option>
     </select>
 
-    <input type="submit" value="Đổi">
+    <button  onclick="clickMoney()">Đổi</button>
+    <div class="content"></div>
 
     <script>
-        let money = document.getElementById("tienBanDau").value;
-        console.log(money);
+        function clickMoney() {
+        let monney = document.getElementById("tienBanDau").value;
+        let vnd = document.querySelector("#tienViet").getAttribute("value");
+        let usd = document.querySelector("#tienMi").getAttribute("value");
+
+        console.log(vnd);
+        console.log(usd);
+        console.log(monney);
+        }
+
+
+
     </script>
 
 </form>
