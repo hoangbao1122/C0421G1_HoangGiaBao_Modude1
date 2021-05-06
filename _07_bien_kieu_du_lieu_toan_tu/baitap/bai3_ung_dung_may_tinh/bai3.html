@@ -8,10 +8,10 @@
 <h1>Máy Tính</h1>
 <input type="text" id="so1">
 <input type="text" id="so2"><br/><br/>
-<button onclick="cong()">Cộng</button>
-<button onclick="tru()">Trừ</button>
-<button onclick="nhan()">Nhân</button>
-<button onclick="chia()">Chia</button>
+<button onclick="cong()">Addition(+)</button>
+<button onclick="tru()">Subtraction(-)</button>
+<button onclick="nhan()">Multiplication(X)</button>
+<button onclick="chia()">Division(/)</button>
 <div class="view"></div>
 <script>
     function cong() {
@@ -24,7 +24,7 @@
         sonNguyenb = parseInt(b);
 
         c = sonNguyena + sonNguyenb;
-        document.querySelector(".view").innerHTML = c;
+        document.querySelector(".view").innerHTML = "Result Addition =   " + c;
 
     }
     function tru() {
@@ -37,7 +37,7 @@
         sonNguyenb = parseInt(b);
 
         c = sonNguyena - sonNguyenb;
-        document.querySelector(".view").innerHTML = c;
+        document.querySelector(".view").innerHTML ="Result Subtraction =   " +  c;
     }
     function nhan() {
         let a = document.querySelector("#so1").value;
@@ -49,7 +49,7 @@
         sonNguyenb = parseInt(b);
 
         c = sonNguyena * sonNguyenb;
-        document.querySelector(".view").innerHTML = c;
+        document.querySelector(".view").innerHTML = "Result Multiplication =   " +  c;
     }
     function chia() {
         let a = document.querySelector("#so1").value;
@@ -61,7 +61,7 @@
         sonNguyenb = parseInt(b);
 
         c = sonNguyena / sonNguyenb;
-        document.querySelector(".view").innerHTML = c;
+        document.querySelector(".view").innerHTML = "Result Division =   " +  c;
     }
 </script>
 </body>
