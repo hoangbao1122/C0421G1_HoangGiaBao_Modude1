@@ -39,44 +39,66 @@
         height: 67px;
          }
     th input{
-        padding: 20px;
+
         border-radius: 8px;
         width: 50px;
         height: 50px;
+        color: deeppink;
+        font-size: 18px;
+
     }
     th input:hover{
-        background: #3f5efb;
+        background: #FBD786;
+
+    }
+    #output{
+        font-size: 20px;
     }
     #dauCong{
         border-radius: 10px;
-        background: #22c1c3;
+        background: #aaffa9;
+    }
+    #dauCong:hover{
+        background: #11FFBD;
     }
     #dauchu{
         border-radius: 10px;
-        background: #b7bd5d;
+        background: #FBD3E9;
+    }
+    #dauchu:hover{
+        background: #BB377D;
     }
     #dauNhan{
         border-radius: 10px;
-        background: #fdbb2d;
+        background: #C6FFDD;
+    }
+    #dauNhan:hover{
+        background: #606c88;
     }
     #dauChia{
         border-radius: 10px;
         background: wheat;
     }
+    #dauChia:hover{
+        background: #FFAFBD;
+    }
     #dauBang{
         border-radius: 10px;
         background: #3f5efb;
+    }
+    #dauBang:hover{
+        background: #00d2ff;
     }
 </style>
 <body>
 <div class="container">
 <table>
     <tr>
-        <td colspan="4"><input type="text" style="width: 98%;height: 30px" id="output"></td>
+        <td colspan="4"><input type="number" style="width: 99%;height: 30px" id="output" value="0" disabled></td>
     </tr>
     <tr>
-        <th><input type="button" value="C"></th>
-        <th><input type="button" value="CE"></th>
+        <th><input type="button" value="C" ></th>
+        <th><input type="button" value="CE" ></th>
         <th><input type="button" value="%"></th>
         <th><input type="button" value="+" id="dauCong"></th>
     </tr>
@@ -93,8 +115,8 @@
         <th><input type="button" value="*" id="dauNhan"></th>
     </tr>
     <tr>
-        <th><input type="button" value="1"></th>
-        <th><input type="button" value="2"></th>
+        <th><input type="button" value="1" class="so" onclick="tinh.value()"></th>
+        <th><input type="button" value="2" class="so" onclick="tinh.value()"></th>
         <th><input type="button" value="3"></th>
         <th><input type="button" value="/" id="dauChia"></th>
     </tr>
@@ -104,7 +126,11 @@
         <th></th>
         <th><input type="button" value="=" id="dauBang"></th>
     </tr>
+    <div id="content"></div>
 </table>
 </div>
+<script>
+
+</script>
 </body>
 </html>

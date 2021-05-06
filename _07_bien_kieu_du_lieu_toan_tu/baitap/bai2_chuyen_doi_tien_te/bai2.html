@@ -17,32 +17,33 @@
 
 
     <select name="" id="">
-    <option value="vietnam" id="tienViet">Mĩ</option>
-    <option value="mi" id="tienMi">Việt Nam</option><br/>
+    <option value="mi" class="miSangViet">Mĩ</option>
+    <option value="vietNam">Việt Nam</option><br/>
     </select>
 
     <label for="">Loại Tiền muốn chuyển</label>
 
     <select name="" id="">
-        <option value="vietnam">Việt Nam</option>
+        <option value="vietnam" >Việt Nam</option>
         <option value="mi">Mĩ</option>
     </select>
 
-    <button  onclick="clickMoney()">Đổi</button>
+    <button onclick="clickMoney()">Đổi</button>
     <div class="content"></div>
-
+</form>
     <script>
-        function clickMoney() {
-        let monney = document.getElementById("tienBanDau").value;
-        let vnd = document.querySelector("#tienViet").getAttribute("value");
-        let usd = document.querySelector("#tienMi").getAttribute("value");
+    function clickMoney () {
 
-        console.log(vnd);
-        console.log(usd);
-        console.log(monney);
-        }
+        let a = document.querySelector("#tienBanDau").value;
+
+        soTien = a * 23000;
+        alert("Số tiền của bạn  " + soTien);
 
 
+
+
+
+    }
 
     </script>
 

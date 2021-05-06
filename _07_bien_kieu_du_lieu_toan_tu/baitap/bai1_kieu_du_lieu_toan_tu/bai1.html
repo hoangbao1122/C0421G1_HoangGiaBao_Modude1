@@ -13,21 +13,19 @@
 
 
 
-    li = prompt("nhập điểm môn lí");
-    hoa = prompt("nhập điểm môn hóa");
-    sinh = prompt("nhập điểm môn sinh");
-    let vatLi = parseInt(li);
-    let hocHoc = parseInt(hoa);
-    let sinhHoc = parseInt(sinh);
+    li = parseInt(prompt("nhập điểm môn lí"));
+    hoa = parseInt( prompt("nhập điểm môn hóa"));
+    sinh =parseInt( prompt("nhập điểm môn sinh"));
+  
 
-    diemTrungBinh = (vatLi  +  hocHoc + sinhHoc) / 3 ;
-    document.write("Điểm vật lí = " + vatLi);
+    diemTrungBinh = (li  +  hoc + sinh) / 3 ;
+    document.write("Điểm vật lí = " + li);
     document.write("<br/>")
 
-    document.write("Điểm  hóa = " + hocHoc);
+    document.write("Điểm  hóa = " + hoa);
     document.write("<br/>");
 
-    document.write("Điểm  sinh = " + sinhHoc);
+    document.write("Điểm  sinh = " + sinh);
     document.write("<br/>");
 
     document.write("điểm trung bình = " + diemTrungBinh);
