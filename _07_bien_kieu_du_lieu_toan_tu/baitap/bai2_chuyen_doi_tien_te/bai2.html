@@ -12,40 +12,46 @@
    }
 </style>
 <body>
-<form action="" method="">
-    <label for="">Số Tiền</label>
-    <input type="text" id="tienBanDau">
-    <label for="">Loại Tiền</label>
 
+ <table style="width: 500px">
+     <tr style="margin-left: 20px">
+         <th>Amount</th>
+         <th >From Curency</th>
+         <th>to Curency</th>
+     </tr>
 
-    <select name="" id="">
-    <option value="mi">VND</option>
-    <option value="vietNam">USD</option><br/>
-    </select>
+     <tr style="margin-left: 20px">
+         <td>
+             <input type="text" id="money">
+         </td>
+         <td>
+             <select name="" id="">
+                 <option value="">Việt Nam</option>
+             </select>
+         </td>
+         <td>
+             <select name="" id="">
+                 <option value="">Mĩ</option>
+             </select>
+         </td>
+         <td>
+             <button onclick="clickMoney()" id="click">Convert</button>
+         </td>
 
-    <label for="">Loại Tiền muốn chuyển</label>
+     </tr>
 
-    <select name="" id="">
-        <option value="vietnam" >USD</option>
-        <option value="mi">VND</option>
-    </select>
+ </table>
+ <div class="view"></div>
 
-    <input type="submit" onclick="clickMoney()" value="Gửu" id="click">
-    <div class="view"></div>
-</form>
     <script>
     function clickMoney() {
-
-        let a = document.getElementById("tienBanDau").value;
-        b = a * 23000;
-        console.log(b);
-
+    let  a = document.querySelector("#money").value;
+    let b = a / 23000;
+    document.querySelector(".view").innerText  = "Result = " +  b + "   VND";
 
 
 
-
-
-  }
+ }
 
 
     </script>
