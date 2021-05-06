@@ -5,45 +5,48 @@
     <title>Title</title>
 </head>
 <style>
-    body{
-
-    }
+   #click{
+        border-radius: 5px;
+        padding: 0px 32px ;
+       background: #11FFBD;
+   }
 </style>
 <body>
-<form action="">
+<form action="" method="">
     <label for="">Số Tiền</label>
     <input type="text" id="tienBanDau">
     <label for="">Loại Tiền</label>
 
 
     <select name="" id="">
-    <option value="mi" class="miSangViet">Mĩ</option>
-    <option value="vietNam">Việt Nam</option><br/>
+    <option value="mi">VND</option>
+    <option value="vietNam">USD</option><br/>
     </select>
 
     <label for="">Loại Tiền muốn chuyển</label>
 
     <select name="" id="">
-        <option value="vietnam" >Việt Nam</option>
-        <option value="mi">Mĩ</option>
+        <option value="vietnam" >USD</option>
+        <option value="mi">VND</option>
     </select>
 
-    <button onclick="clickMoney()">Đổi</button>
-    <div class="content"></div>
+    <input type="submit" onclick="clickMoney()" value="Gửu" id="click">
+    <div class="view"></div>
 </form>
     <script>
-    function clickMoney () {
+    function clickMoney() {
 
-        let a = document.querySelector("#tienBanDau").value;
-
-        soTien = a * 23000;
-        alert("Số tiền của bạn  " + soTien);
-
+        let a = document.getElementById("tienBanDau").value;
+        b = a * 23000;
+        console.log(b);
 
 
 
 
-    }
+
+
+  }
+
 
     </script>
 
