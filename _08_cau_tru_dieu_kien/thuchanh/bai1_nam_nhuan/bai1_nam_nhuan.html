@@ -7,17 +7,14 @@
 <body>
 <script>
     let soNam = parseInt(prompt("Nhập số Năm"));
-    if (soNam % 4 ==0){
-        if (soNam % 100 ==0 ){
-            alert("không phải năm nhuận");
-        }else {
-            alert("năm nhuận");
-        }
-    }else if(soNam % 100 ==0 && soNam % 400 ==0){
-        alert("năm nhuận");
-        }else {
-        alert("không phải năm nhuận");
-    }
+   if(soNam % 4 ==0 && soNam % 100 !=0){
+       alert("năm nhuận");
+   }else if(soNam % 100 ==0 & soNam % 400 == 0 ){
+       alert("năm nhuận");
+   }else {
+       alert("năm không nhuận");
+   }
+
 
 </script>
 </body>
