@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let time = parseFloat(prompt("Số phút bạn đã gọi (phút)"));
+    if (time >= 1000){
+        money = time * 3.000;
+        document.write(money+" 000 VND");
+    }else if (time >= 700){
+        money = time * 2.500;
+        document.write(money+" 000 VND ");
+    }else {
+        money = time * 1.500;
+        document.write(money+" 000 VND ");
+    }
+</script>
+</body>
+</html>

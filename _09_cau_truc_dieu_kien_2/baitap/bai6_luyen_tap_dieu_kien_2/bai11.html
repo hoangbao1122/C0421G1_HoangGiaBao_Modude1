@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tính Thuế Thu Nhập Cá Nhân</h1>
+<div id="view"></div>
+<script>
+    let money = parseFloat(prompt("Tổng số lương hàng tháng của bạn"));
+    let view = document.getElementById("view");
+    if (money >= 20000000){
+        tax = (money * 15)/100;
+        view.innerText = "Lương của bạn trên 20.000.000 sẽ đóng thuế 15% =  " + tax + "VND";
+
+    }else if (money >= 10000000){
+        tax = (money * 10)/100;
+        view.innerText = "Lương của bạn trên 10.000.000 sẽ đóng thuế 10% =  " + tax + "VND";
+    }else {
+        tax = (money * 5)/100;
+        view.innerText = "Lương của bạn trên dưới 10.000.000 sẽ đóng thuế 5% =  " + tax + "VND";
+    }
+</script>
+</body>
+</html>

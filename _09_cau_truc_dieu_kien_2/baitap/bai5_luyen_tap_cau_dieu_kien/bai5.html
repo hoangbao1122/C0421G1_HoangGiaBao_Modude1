@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Điểm Kiểm tra</th>
+        <th>Điểm giữa kì</th>
+        <th>Điểm cuối kì</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="testMark"></td>
+        <td><input type="text" id="pointMid"></td>
+        <td><input type="text" id="pointEnd"></td>
+        <td><input type="submit" onclick="total()"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><div id="totalView">Total: </div></td>
+        <td><div id="rank"></div></td>
+
+    </tr>
+
+
+</table>
+<script>
+
+
+    function total() {
+
+        let testMark = parseFloat(document.getElementById("testMark").value);
+
+
+        let pointMid = parseFloat(document.getElementById("pointMid").value);
+
+        let pointEnd = parseFloat( document.getElementById("pointEnd").value);
+
+        let totalScore =(testMark + pointMid + pointEnd) / 3;
+        document.getElementById("totalView").innerText = "Total: " + totalScore.toFixed(2);
+
+        if (totalScore >= 8.5 ){
+            document.getElementById("rank").innerText =" học lực Giỏi";
+        }else if(totalScore >=6.5){
+            document.getElementById("rank").innerText = "học lực Khá";
+        }else if (totalScore > 5){
+            document.getElementById("rank").innerText = "học lực Trung Bình";
+        }else{
+            document.getElementById("rank").innerText = "học lực Yếu";
+        }
+    }
+</script>
+</body>
+</html>

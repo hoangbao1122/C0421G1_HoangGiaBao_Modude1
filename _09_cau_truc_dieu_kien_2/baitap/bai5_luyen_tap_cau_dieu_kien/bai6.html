@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let doanhSo = parseFloat(prompt("Số tiền bạn đã bán được"));
+    if(doanhSo>=1000){
+        hoaHong = (doanhSo * 20)/100;
+        document.write("20% hoa hồng = " + hoaHong)
+    }else if (doanhSo >= 700){
+        hoaHong = (doanhSo * 15 )/100;
+        document.write("15% hoa hồng = " + hoaHong)
+    }else if(doanhSo >= 500){
+        hoaHong = (doanhSo * 10 )/100;
+        document.write("10% hoa hồng = " + hoaHong)
+    }else {
+        hoaHong = (doanhSo * 5 )/100;
+        document.write("5% hoa hồng = " + hoaHong)
+    }
+
+
+</script>
+</body>
+</html>

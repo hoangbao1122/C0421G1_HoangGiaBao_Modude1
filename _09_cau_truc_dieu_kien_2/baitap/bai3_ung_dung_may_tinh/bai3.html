@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: auto;
+
+    }
+    body{
+        background: #3f5efb;
+        background-image:url("nen.jpg") ;
+    }
+    .container{
+        width: 450px;
+        height: 402px;
+
+        background: #12FFF7;
+        border-radius: 15px;
+    }
+    table{
+        margin-top: 100px;
+        width: 450px;
+        height: 300px;
+
+
+    }
+    tr{
+        border-radius: 10px;
+    }
+    #view{
+        border-radius: 8px;
+        height: 32px;
+        font-size: 30px;
+        text-align: right;
+        background: #C6FFDD;
+    }
+
+    th{
+        width: 50px;
+        height: 67px;
+    }
+    th input{
+
+        border-radius: 8px;
+        width: 50px;
+        height: 50px;
+        color: deeppink;
+        font-size: 18px;
+
+    }
+    th input:hover{
+        background: #FBD786;
+
+    }
+
+    #dauCong{
+        border-radius: 10px;
+        background: #aaffa9;
+    }
+    #dauCong:hover{
+        background: #11FFBD;
+    }
+    #dauchu{
+        border-radius: 10px;
+        background: #FBD3E9;
+    }
+    #dauchu:hover{
+        background: #BB377D;
+    }
+    #dauNhan{
+        border-radius: 10px;
+        background: #C6FFDD;
+    }
+    #dauNhan:hover{
+        background: #606c88;
+    }
+    #dauChia{
+        border-radius: 10px;
+        background: wheat;
+    }
+    #dauChia:hover{
+        background: #FFAFBD;
+    }
+    #dauBang{
+        border-radius: 10px;
+        background: #3f5efb;
+    }
+    #dauBang:hover{
+        background: #00d2ff;
+    }
+</style>
+<body>
+<div class="container">
+    <table>
+        <tr>
+            <td colspan="4"><p style="width: 100%" id="view"></p></td>
+        </tr>
+        <tr>
+            <th><input type="button" value="C" onclick="calculator('C')"></th>
+            <th><input type="button" value="CE" onclick="calculator('CE')" ></th>
+            <th><input type="button" value="%" onclick="calculator('%')"></th>
+            <th><input type="button" value="+" id="dauCong" onclick="calculator('+')"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="7" onclick="calculator('7')"></th>
+            <th><input type="button" value="8" onclick="calculator('8')"></th>
+            <th><input type="button" value="9" onclick="calculator('9')"></th>
+            <th><input type="button" value="-" id="dauchu" onclick="calculator('-')"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="4" onclick="calculator('4')"></th>
+            <th><input type="button" value="5" onclick="calculator('5')"></th>
+            <th><input type="button" value="6" onclick="calculator('6')"></th>
+            <th><input type="button" value="*" id="dauNhan" onclick="calculator('*')"></th>
+        </tr>
+        <tr>
+            <th><input type="button" value="1" class="so" onclick="calculator('1')"></th>
+            <th><input type="button" value="2" class="so" onclick="calculator('2')"></th>
+            <th><input type="button" value="3" onclick="calculator('3')"></th>
+            <th><input type="button" value="/" id="dauChia" onclick="calculator('/')"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="button" value="0" onclick="calculator('0')"></th>
+            <th></th>
+            <th><input type="button" value="=" id="dauBang" onclick="calculator('=')"></th>
+        </tr>
+        <div id="content"></div>
+    </table>
+</div>
+<script>
+    function calculator(operator) {
+        let view = document.getElementById("view").innerText;
+        switch (operator) {
+            case '0':
+            case '1':
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+            case '+':
+            case '-':
+                view = view + operator;
+                break;
+            case '/':
+            case '*':
+                if(view.length != 0){
+                    view = view + operator;
+                }
+                break
+            case 'C':
+                view = "";
+                break;
+            case '=':
+                view = eval(view);
+                break;
+        }
+        document.getElementById("view").innerText = view;
+    }
+</script>
+</body>
+</html>

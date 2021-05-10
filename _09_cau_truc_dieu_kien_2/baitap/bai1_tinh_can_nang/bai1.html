@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="view"></div>
+<script>
+    let bmiWeight = parseFloat(prompt("Nhập vào số cân nặng của bạn"));
+    let bmiHeight = parseFloat(prompt("nhập vào chiều cao của bạn"));
+    let index = bmiWeight / ( bmiHeight * bmiHeight );
+
+    console.log(index);
+    let view = document.querySelector(".view")
+
+    if (index<18.5){
+        view.innerText = "underweight";
+        console.log(index);
+    }else if(index<25){
+        view.innerText = "normal";
+        console.log(index);
+    }else if(index<30){
+        view.innerText = "Overweight";
+
+    }else if(index>30){
+        view.innerText = "Obese";
+    }
+
+</script>
+</body>
+</html>

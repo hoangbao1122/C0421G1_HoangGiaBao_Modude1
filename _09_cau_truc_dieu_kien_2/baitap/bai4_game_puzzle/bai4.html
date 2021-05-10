@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    img{
+        width: 300px;
+        height: 300px;
+
+    }
+</style>
+<body>
+<img src="1.jpg" alt="" onclick="clickImg()"><br/>
+<img src="2.jpg" alt="" onclick="clickImg2()"><br/>
+<img src="3.png" alt=""onclick="clickImg3()">
+<script>
+
+    function  clickImg() {
+        var a = document.getElementsByTagName("img");
+        a.setAttribute('src','2.jpg');
+        console.log(a);
+    }
+    function clickImg2() {
+        a.setAttribute('src','1.jpg');
+        console.log()
+    }
+</script>
+</body>
+</html>
