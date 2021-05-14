@@ -6,16 +6,22 @@
 </head>
 <body>
 <script>
-
-    var result;
+    var result = 0;
     let a = 0;
     let b = 1;
 
     for (i=1;i<20;i++){
-        document.write(result+"<br/>");
+
         result = a+ b;
         a=b;
         b=result;
+
+        if (b % 5 ==0){
+            first5 = b;
+            document.write("số đầu tiên trong dãy fibonacci chia hết cho 5 = " + first5);
+            break;
+        }
+
     }
 
 </script>
