@@ -8,18 +8,23 @@
 <script>
     let array =[1,2,3,4,5];
     let value = parseInt(prompt("nhập vào 1 số"));
-
+    let check  = false;
    for (i=0;i<array.length;i++){
        if (value === array[i]){
+           ;
            alert("Số bạn vừa nhập trùng với số trong mảng");
            document.write("Số Trong mảng = " + array + "<br/>");
            document.write("Số bạn nhập = " + value);
-           break;
-       }else if (value != array[i]){
-           alert("số Bạn nhập không đúng");
+           check = true;
            break;
        }
-   }
+
+       }if (check == false){
+       alert("số bạn nhập không có trong mảng");
+
+    }
+
+
 </script>
 </body>
 </html>

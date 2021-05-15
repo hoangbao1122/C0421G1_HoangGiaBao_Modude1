@@ -6,13 +6,19 @@
 </head>
 <body>
 <script>
-    let monneyFirst = 100.000; // số tiền 100.000
-    let laiNganHang = 5; // lãi suất 5 %
-    let thangGuu = 5; // gửu trong 5 tháng
-    let result = 0
-    for (i=0;i<thangGuu;i++){
-        result = 
-    }
+   let money = parseInt(prompt("nhập vào số tiền bạn muốn gửu"));
+   let soThang = parseInt(prompt("nhập vào số tháng bạn muốn gửu"));
+
+   let tongTien;
+   if (soThang>=6){
+       tongTien = (money * 5)/100;
+       console.log("bạn nhận được 5% hàng tháng " + tongTien);
+   }else{
+       tongTien = (money * 2)/100;
+       document.write("bạn nhận được 2% hàng tháng " + tongTien);
+   }
+
+
 </script>
 </body>
 </html>

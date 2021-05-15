@@ -5,19 +5,24 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="text" id="inputTrans">
+<button onclick="ClickTrans()">Click</button>
+<div id="view"></div>
 <script>
-    let array = [
-        ["1","2","3"],
-        ["sư tử","hổ","khủng long"]
+  let array1 = ["sư tử","khủng long","chó"];
+  let array2 = ["hoang","gia","bao"];
 
-    ];
-    let value = prompt("nhập vao1 số");
+function ClickTrans() {
+    let input = document.getElementById("view").value;
+    for(i=0;i<array2.length;i++){
+        if (input == array2[i]) {
+           document.write(array1[i]);
+        }
+        
 
-    if (value === array[0]){
-        alert(ok);
+        
     }
-
+}
 </script>
 </body>
 </html>
