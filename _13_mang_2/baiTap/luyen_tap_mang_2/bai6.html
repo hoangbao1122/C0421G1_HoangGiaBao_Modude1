@@ -6,14 +6,16 @@
 </head>
 <body>
 <script>
-    let array = new Array("-","-","-","-","-");
-    document.write(array);
+    let array = new Array("-","1","2","-","5");
+    document.write("ban đầu : " + array);
     for (i=0;i<array.length;i++){
-        array[i] = "_";
+        if (array[i]=="-") {
+        	array[i] = "_";
+        }
 
     }
     document.write("<br/>");
-    document.write(array);
+    document.write("Thay đổi: " + array);
 </script>
 </body>
 </html>

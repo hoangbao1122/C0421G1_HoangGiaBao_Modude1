@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let a = new Array(5);
+	let b = new Array(5);
+	
+	let c;
+
+	for(i=0;i<a.length;i++){
+		a[i] = parseInt(prompt("nhập 5 phần tử vào mảng a"));
+	}
+	for(j=0;j<b.length;j++){
+		b[j] = parseInt(prompt("nhập 5 phần tử vào mảng b"));
+	}
+	c = a.concat(b);
+	document.write("Mảng c " + c + "<br/>")
+	console.log(c);
+</script>
+</body>
+</html>

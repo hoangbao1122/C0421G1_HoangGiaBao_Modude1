@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	let array = new Array(10);
+	let result = false;
+	for(i=0;i<array.length;i++){
+		array[i] = parseFloat(prompt("nhập vào 10 phần tử"));
+		console.log(array);
+		if (array[i]>0 || array[i]<0) { // số âm và số dương
+			result = true
+			document.write(array[i] + " V is in the array"  + "<br/>");
+			
+		}
+	}if(result == false){
+		document.write("V is not in the array");
+	}
+</script>
+</body>
+</html>
