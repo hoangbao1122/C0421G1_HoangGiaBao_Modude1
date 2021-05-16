@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let money = parseInt(prompt("nhập vào số tiền bạn muốn gửu"));
+   let soThang = parseInt(prompt("nhập vào số tháng bạn muốn gửu"));
+
+   let tongTien;
+   if (soThang>=6){
+       tongTien = (money * 5)/100;
+       console.log("bạn nhận được 5% hàng tháng " + tongTien);
+   }else{
+       tongTien = (money * 2)/100;
+       document.write("bạn nhận được 2% hàng tháng " + tongTien);
+   }
+
+
+</script>
+</body>
+</html>
