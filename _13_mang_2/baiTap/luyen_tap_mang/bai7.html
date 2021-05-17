@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+	let array = [1,2,3,4,5];
+
+	let soMuonDoi = parseInt(prompt());
+	let result = false;
+	document.write("Mảng ban đầu " + array + "<br/>");
+	for (i=0;i<array.length;i++){
+
+		if (soMuonDoi === array[i]){
+			console.log("có số muốn xóa");
+			array.splice(i,1);
+			array.push(0);
+			result = true;
+			console.log(array);
+			document.write("Mảng sau khi xóa đi phần tử " + array);
+		}
+	}if (result == false){
+		document.write("Mảng bạn nhập không thay đổi");
+	}
+
+
+
+</script>
+</body>
+</html>

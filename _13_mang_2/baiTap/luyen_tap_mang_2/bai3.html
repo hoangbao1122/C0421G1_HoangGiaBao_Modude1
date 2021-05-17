@@ -6,9 +6,17 @@
 </head>
 <body>
 <script>
-    let array = new Array("hoang","gia","bao");
-    view = array.join();
-    document.write(view.length);
+    let array = new Array("hoang",1,"bảo",3,5,8,"4");
+    let count = 0;
+
+    for (i=0;i<array.length;i++){
+       if(isNaN(array[i])==false){
+           count++;
+
+       }
+
+    }document.write("Mảng có " + count + " phần tử là số");
+
 </script>
 </body>
 </html>

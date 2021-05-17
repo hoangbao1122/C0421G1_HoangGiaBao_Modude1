@@ -6,14 +6,28 @@
 </head>
 <body>
 <script>
-    let value = prompt("nhập vào chữ hoặc số");
-    let value2 = prompt("nhập vào chữ hoặc số");
+    let string1 = prompt("nhập vào chuỗi 1");
+    let string2 = prompt("nhập vào chuỗi 2");
 
-    if (value == value2){
-        alert("2 Chữ giống nhau");
+    let arrayStr1 = string1.split("");
+    let arrayStr2 = string2.split("");
 
+    let result = false;
+    if(arrayStr1.length == arrayStr2.length){
+        for (i=0;i<arrayStr1.length;i++){
+            if (arrayStr1[i] == arrayStr2[i]){
+                document.write("Giống nhau");
+                result = true;
+                break;
+            }else {
+                result = false;
+                document.write("không giống nhau")
+                break;
+            }
+        }
     }else {
-        alert("2 chữ không giống nhau");
+        result = false;
+        document.write("Không giống nhau");
     }
 </script>
 </body>
