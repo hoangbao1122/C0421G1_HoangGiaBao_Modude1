@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="">Nhập vào C</label>
+<input type="number" oninput="tinh()">
+<div></div>
+<script>
+    function tinh() {
+        let input = document.querySelector("input").value;
+        let result = (input - 32)/1.8;
+        document.querySelector("div").innerText = "F = " +  result.toFixed(3);
+    }
+</script>
+</body>
+</html>

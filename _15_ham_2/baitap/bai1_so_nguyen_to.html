@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(number) {
+        let count = 0;
+
+        for (i=1;i<=number;i++){
+            if (number % i == 0){
+                count++;
+                console.log()
+            }
+
+    }if(count == 2){
+            console.log("đây là số nguyên tố")
+        }else {
+            console.log("ko pải số nguyên tố");
+        }
+
+    }
+    let input = parseInt(prompt("nhập vào 1 số"));
+    isPrime(input);
+</script>
+</body>
+</html>

@@ -6,28 +6,25 @@
 </head>
 <body>
 <script>
-    let string1 = prompt("nhập vào chuỗi 1");
-    let string2 = prompt("nhập vào chuỗi 2");
-
-    let arrayStr1 = string1.split("");
-    let arrayStr2 = string2.split("");
-
-    let result = false;
-    if(arrayStr1.length == arrayStr2.length){
-        for (i=0;i<arrayStr1.length;i++){
-            if (arrayStr1[i] == arrayStr2[i]){
-                document.write("Giống nhau");
-                result = true;
-                break;
-            }else {
-                result = false;
-                document.write("không giống nhau")
+    let str1 = prompt("Nhap chuoi 1");
+    let str2 = prompt("Nhap chuoi 2");
+    let arrStr1 = str1.split("");
+    let arrStr2 = str2.split("");
+    let check = true;
+    if (arrStr1.length===arrStr2.length){
+        for (let i=0;i<arrStr1.length;i++) {
+            if ( arrStr1[i] != arrStr2[i] ){
+                check = false ;
                 break;
             }
         }
     }else {
-        result = false;
-        document.write("Không giống nhau");
+        check=false;
+    }
+    if (check){
+        document.write("Hai chuỗi giống nhau");
+    }else {
+        document.write("Hai chuỗi khác nhau");
     }
 </script>
 </body>

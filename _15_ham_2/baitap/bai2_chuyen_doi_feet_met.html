@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function yesNo() {
+     let choose = parseInt(prompt("chọn 1 từ F -> M, chón 2 từ M->F "));
+     if (choose === 1){
+         feetToMetter();
+     }else if(choose === 2){
+         metterToFeet();
+     }else {
+         alert("bạn nhập sai");
+     }
+
+    }
+    function feetToMetter() {
+        let feet = parseInt(prompt("chuyển từ feet sang met"));
+        let result = 0.305 * feet;
+        document.write(feet + "feet =" + result + "met");
+    }
+    function metterToFeet() {
+        let metter = parseInt(prompt("chuyển từ met sang feet"));
+        let result = 3.279 * metter;
+        document.write(metter + "met = " + result + "feet");
+    }
+    yesNo();
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+ function yesOrNo(answer) {
+     let result= "";
+    if(answer){
+        result = "OK";
+    }else {
+        result = "no";
+    }
+    return result;
+ }
+ let input = confirm("Click");
+ let view = yesOrNo(input);
+ alert(view)
+
+</script>
+</body>
+</html>
