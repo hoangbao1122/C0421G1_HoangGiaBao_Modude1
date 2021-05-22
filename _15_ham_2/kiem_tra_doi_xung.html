@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPalindrome(array, first, last) {
+        if (first >= last) {
+            return true;
+        } else {
+            if (array[first]!= array[last]) {
+                return false;
+            } else {
+                first++;
+                last--;
+                return isPalindrome(array, first, last);
+            }
+        }
+    }
+    let str = "121";
+    let result = isPalindrome(str, 0, str.length - 1);
+    console.log(result);
+</script>
+</body>
+</html>

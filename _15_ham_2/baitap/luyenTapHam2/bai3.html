@@ -7,15 +7,14 @@
 <body>
 <script>
     function giaiThua(a) {
-
-        for (i=1;i<=a;i++){
-            return a * i;
+        let result = 1;
+        for (i = 1; i <= a; i++) {
+            result *= i;
 
         }
-
+        document.write("giai thừa của  "+  a +" = "+result);
     }
-    let input = giaiThua(parseInt(prompt("nhập vào 1 số")))
-    console.log(input);
+    giaiThua(parseInt(prompt("nhập vào 1 số")))
 
 
 

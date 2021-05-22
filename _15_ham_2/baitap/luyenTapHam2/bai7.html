@@ -6,15 +6,20 @@
 </head>
 <body>
 <script>
-    function doiCho2So(a,b) {
-         a = b;
-
-       console.log(a);
-       console.log(b);
+    function swap(array) {
+        let  temp = array[0];
+        array[0] = array[1];
+        array[1] = temp;
 
     }
-    doiCho2So(1,2)
-    //console.log(result);
+    let a = parseInt(prompt("nhập vào a"));
+    let b = parseInt(prompt("nhập vào b"));
+    let arr = [a,b];
+
+    document.write("trước khi swap " + arr[0] + " "  +arr[1] + "<br/>");
+    swap(arr);
+    document.write("sau khi swap " + arr[0] +  " " + arr[1]);
+
 </script>
 </body>
 </html>
