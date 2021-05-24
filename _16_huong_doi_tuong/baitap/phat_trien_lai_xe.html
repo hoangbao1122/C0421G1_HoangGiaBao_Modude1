@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+</style>
+<body onload="docReady()">
+<img id="control" src="anh.jpg" style="position:absolute;left:0; top:0;" height="200" width="200"/>
+<canvas id="myCanvas" width="800" height="500" style="border:1px solid #000000;">
+</canvas>
+<script type="text/javascript">
+
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+    function moveSelection(event) {
+        let control = document.getElementById("control");
+        switch (event.which) {
+            case 38:
+                control.style.top = parseInt(control.style.top) - 10 + 'px';
+                break;
+            case 40:
+                control.style.top = parseInt(control.style.top) + 10 + 'px';
+                break;
+            case 37:
+                control.style.left = parseInt(control.style.left) - 10 + 'px';
+                break;
+            case 39:
+                control.style.left = parseInt(control.style.left) + 10 + 'px';
+                break;
+        }
+    }
+
+</script>
+</body>
+</html>

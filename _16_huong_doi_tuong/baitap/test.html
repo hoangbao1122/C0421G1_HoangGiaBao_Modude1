@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class mobile{
+        constructor(pin,saveMessTest,saveMessTo,saveMessSend,status) {
+            this.pin = pin;
+            this.saveMessage = saveMessTest;
+            this.saveMessTo = saveMessTo;
+            this.saveMessSend = saveMessSend;
+            this.status = status;
+        }
+       turnOn(){
+            this.pin = true;
+        }
+        turnOff(){
+            this.pin = false;
+        }
+        charge(pin){
+            if (pin<50){
+                console.log("hãy sạc pin");
+            }
+            else {
+                console.log("còn pin");
+            }
+        }
+        textMessage(saveMessTest){  /// chưa biết
+
+        }
+        // setToMesss(){
+        //     this.saveMessTo = saveMessTo;  /// nhận tin nhắn
+        // }
+
+        sendMess(){
+
+        }
+
+
+
+    }
+    let dienThoai = new mobile(100);
+    dienThoai.charge();
+
+</script>
+</body>
+</html>

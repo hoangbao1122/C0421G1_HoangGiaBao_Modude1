@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let nhietDo = function (c) {
+    this.c = c;
+
+    this.chuyenCsangF= function (f) {
+        return 9 / 5 * c + 32;
+    }
+    this.chuyenCsangK= function (k) {
+        return c + 273.15;
+    }
+}
+let chuyenDoi = new nhietDo(10);
+let f = chuyenDoi.chuyenCsangF();
+    alert("C sang độ F = " + f);
+let k = chuyenDoi.chuyenCsangK(1);
+    alert("C sang độ K = " + k);
+</script>
+</body>
+</html>

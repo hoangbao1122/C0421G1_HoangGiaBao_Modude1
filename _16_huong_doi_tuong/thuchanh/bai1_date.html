@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        let myDate = function (day,month,year) {
+            this.day = day;
+            this.month =month;
+            this.year = year;
+
+            this.getday = function () {
+                return this.day;
+            }
+            this.getMonth = function () {
+                return this.month;
+            }
+            this.getYear = function () {
+                return this.year;
+            }
+            this.setday = function () {
+                this.day = day;
+            }
+            this.setMonth = function () {
+                this.month = month;
+            }
+            this.setyear = function () {
+                this.year = year;
+            }
+
+
+        };
+        let ngay = new myDate(1,1,2000);
+
+        let date = ngay.getday();
+        let month = ngay.getMonth();
+        let year = ngay.getYear();
+
+        alert(date + "/" + month + "/" + year);
+
+        ngay.setday(10);
+        ngay.setMonth(10);
+        ngay.setyear(2000);
+
+        alert(ngay.getday() + "/" + ngay.getMonth() + "/" + ngay.getMonth());
+
+
+</script>
+
+</body>
+</html>
