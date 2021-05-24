@@ -6,25 +6,90 @@
 </head>
 <body>
 <script>
-    function Mobile(id,name) {
-        this.id = id;
-        this.name = name;
-        this.message = "";
-        this.setMessage = function (message) {
-            this.message = message;
+    class Mobile {
+        constructor(id, name, pin, status,saveMessageText) {
+
+            this.id = id;
+            this.name = name;
+            this.message = "";
+            this.pin = pin;
+            this.saveMessageText = "";
+            this.status = status;
         }
-        this.getMessage = function () {
+
+        getNangLuong() {
+            return this.pin;
+        }
+
+        giamPin() {
+            if (this.pin > 0) {
+                this.pin--;
+            }
+        }
+
+        tangPin() {
+            if (this.pin < 100) {
+                this.pin++;
+            }
+
+        }
+
+        turnOn() {
+            if (this.pin > 0) {
+                this.status = true;
+                this.giamPin();
+                return true;
+            } else {
+                this.status = false;
+                return false;
+            }
+
+        }
+
+        turnOff() {
+            this.status = false;
+            return false;
+        }
+
+        sacPin() {
+            if (this.pin < 100) {
+                this.tangPin();
+            }
+        }
+
+        setMess(newMess) {
+            this.message = newMess;
+        }
+
+        getMess() {
             return this.message;
         }
-        this.sendMessage = function (message,moblie) {
-                moblie.setMessage(message);
-            }
+
+        sendMess(message, mobile) {
+            this.setMess(message);
+        }
+        soanMess(messText){
+            this.saveMessageText = messText;
+        }
     }
-    let iphone = new Mobile(1,"iphone");
-    let adroid = new Mobile(2,"samsung");
-    iphone.sendMessage("message iphone",adroid);
-    let message1 = adroid.getMessage();
+
+    let iphone = new Mobile(1, "iphone", 50);
+
+    let nokia = new Mobile(2, "samsung");
+
+    iphone.sendMess("hello nokia", nokia);
+
+    nokia.sendMess("hello iphone", iphone);
+    console.log("bật " + iphone.turnOn() + " năng lượng " + iphone.getNangLuong());
+    console.log("soạn mess" + iphone.soanMess("xin chào tôi là bảo"));
+
+    let message1 = nokia.getMess();
+
+    let message2 = iphone.getMess();
+
     console.log(message1);
+    console.log(message2);
+    console.log("tắt " + iphone.turnOff());
 </script>
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="500"></canvas>
+<script>
+    class myRectangle {
+        constructor(width,height) {
+            this.width = width;
+            this.height = height;
+        }
+        calPerimeter(width, height) {
+            return (width + height) * 2;
+        }
+        calArea(width, height) {
+            return width * height;
+        }
+        getCanvas(width,height) {
+            let canvas = document.getElementById("myCanvas");
+            let canvasContext = canvas.getContext("2d");
+            canvasContext.rect(400,200,width,height);
+            canvasContext.stroke();
+            canvasContext.fillStyle = "yellow";
+            canvasContext.fill();
+        }
+    }
+    let rectangleObj = new myRectangle()
+    rectangleObj.getCanvas(400,300);
+
+
+</script>
+</body>
+</html>
