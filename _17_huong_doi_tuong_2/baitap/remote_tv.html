@@ -10,44 +10,72 @@
 <body>
 <script>
     class remote {
-        constructor(idChanel, audio) {
-            this.idChanel = idChanel;
+        constructor(IdChanal,audio,status) {
+            this.audio  = audio;
+            this.status = status;
         }
-
-        getIdChanel() {
-            return this.idChanel;
+        getIdChannal(){
+            return this.IdChanal;
         }
-
-        setIdChanal(newChannal) {
-            this.idChanel = newChannal;
+        setIdChanal(newId) {
+            this.IdChanal = newId;
         }
-
-        controlChannel(newChanel) {
-            this.idChanel = newChanel;
+        getAudio(){
+            return this.audio;
         }
-
-        controlAudio(newAudio) {
-            this.audio = newAudio;
+        tangVolum(){
+            if (this.audio<100){
+                this.audio++;
+            }
         }
-
+        giamVolum(){
+            if (this.audio<100){
+                this.audio--;
+            }
+        }
+        turnOn(){
+            this.status = true;
+        }
+        turnOff(){
+            this.status = false;
+        }
     }
 
-    class Tivi {
-        constructor(status) {
+    class tivi{
+        constructor(nowId,status) {
+            this.status = status;
+            this.nowId  = nowId;
         }
-
-        getIdchannalNow() {
-            remote.getIdChanel();
+        turnOn(){
+            this.status = true;
         }
-
-        setIdChanal() {
+        turnOff(){
+            this.status = false;
         }
-
+        getNowId(){
+            return this.nowId;
+        }
+        setNowId(){
+            this.remove.setIdChanal()
+        }
     }
-    let dieuKhhien = new remote("4", "5");
-    dieuKhhien.setIdChanal("8");
-    console.log(dieuKhhien);
-    let tv = new Tivi();
+    let dieuKhien = new remote(12,20);
+    let tv = new tivi(7);
+    tv.turnOn();
+    console.log("Bật tv "+tv.status);
+    console.log("Kênh hiện tại "+tv.getNowId());
+    dieuKhien.setIdChanal(3);
+    console.log("Chuyển kênh " + dieuKhien.getIdChannal());
+    console.log("volum hiện tại " + dieuKhien.getAudio());
+    dieuKhien.tangVolum();
+    console.log("tăng volum " + dieuKhien.getAudio());
+    dieuKhien.giamVolum();
+    console.log("giảm volum " + dieuKhien.getAudio());
+    tv.turnOff();
+    console.log("tắt tv " + " " +tv.status);
+
+
+
 
 </script>
 </body>

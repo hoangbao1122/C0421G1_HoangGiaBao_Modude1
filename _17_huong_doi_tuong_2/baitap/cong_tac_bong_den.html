@@ -6,91 +6,44 @@
 </head>
 <body>
 <script>
-
-    class Battery {
-        constructor(energy) {
-            this.energy = energy;
+    class ElectricLamp{
+        constructor(status) {
+            this.status = status;
         }
-
-        setEnergy(energy) {
-            this.energy = energy;
+        turnOff(){
+            this.status = false;
         }
-
-        getEnergy() {
-            return this.energy;
-        }
-
-        decreaseEnergy() {
-            if (this.energy > 0) {
-                this.energy--;
-            }
+        turnOn() {
+            this.status = true;
         }
     }
-
-    class FlashLamp {
-
-        constructor(battery) {
-            this.battery = battery;
+    class SwitchButton{
+        constructor(status,lamp) {
+            this.status = status;
+            this.lamp = lamp;
         }
-
-        setBattery() {
-            this.battery = battery;
+        connectToLamp(lamp) {
+            lamp.status = this.status;
         }
-
-        getBatteryInfo() {
-            return this.battery.getEnergy();
+        switchTurnOn() {
+            this.status = true;
         }
-
-        getBattery(){
-            return this.battery;
-        }
-
-        light() {
-            if (this.status) {
-                alert("Lighting");
-            } else {
-                alert("Not lighting")
-            }
-        }
-
-        turnOn() {
-            if (this.battery.getEnergy() > 0) {
-                this.status = true;
-                this.battery.decreaseEnergy();
-                return true;
-            } else {
-                this.status = false;
-                return false;
-            }
-        }
-
-        turnOff() {
+        switchTurnOff() {
             this.status = false;
         }
     }
+    let electricLamp = new ElectricLamp(true);
+    let switchButton = new SwitchButton(true);
 
 
-    let battery = new Battery(5);
-
-    let flashLamp = new FlashLamp(battery);
-    document.write("Pin Mới: " + flashLamp.getBattery().getEnergy() + "</br>");
-    flashLamp.light();
-
-    flashLamp.turnOn();
-    flashLamp.light();
-    document.write("Pin khi bật đèn: " + flashLamp.getBatteryInfo() + "</br>");
-
-    flashLamp.turnOff();
-    flashLamp.light();
-    document.write("Pin Khi tắt đèn: " + flashLamp.getBatteryInfo() + "</br>");
-
-    if (flashLamp.turnOn() == false) {
-        alert("Het pin roi");
+    switchButton.connectToLamp(electricLamp);
+    for (i=0;i<10;i++){
+        switchButton.switchTurnOn();
+        switchButton.switchTurnOff();
     }
-
-
+    console.log(electricLamp.status);
+    console.log(electricLamp.status);
 
 </script>
-
 </body>
 </html>
