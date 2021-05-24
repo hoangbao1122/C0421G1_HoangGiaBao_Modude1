@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    class remote {
+        constructor(idChanel, audio) {
+            this.idChanel = idChanel;
+        }
+
+        getIdChanel() {
+            return this.idChanel;
+        }
+
+        setIdChanal(newChannal) {
+            this.idChanel = newChannal;
+        }
+
+        controlChannel(newChanel) {
+            this.idChanel = newChanel;
+        }
+
+        controlAudio(newAudio) {
+            this.audio = newAudio;
+        }
+
+    }
+
+    class Tivi {
+        constructor(status) {
+        }
+
+        getIdchannalNow() {
+            remote.getIdChanel();
+        }
+
+        setIdChanal() {
+        }
+
+    }
+    let dieuKhhien = new remote("4", "5");
+    dieuKhhien.setIdChanal("8");
+    console.log(dieuKhhien);
+    let tv = new Tivi();
+
+</script>
+</body>
+</html>
