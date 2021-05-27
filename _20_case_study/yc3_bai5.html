@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = parseInt(prompt("nhập vào mã số nước uống của bạn (7:thoát)"));
+    let id = [1,2,3,4,5,6];
+    let nuocUong = ["Cafe", "Cam vắt", "Nước ép cà rốt", "Nước ép cà chua", "Nước lọc", "Nước dừa"];
+    let money = [15000,25000,35000,45000,5000,20000];
+    let check = false;
+    for (i=0;i<id.length;i++){
+        if (input == 7){
+            check = true;
+            alert("thoát");
+            break;
+        }else if (input == id[i]){
+            check = true;
+            alert("bạn chọn nước uống "+nuocUong[i]);
+            alert("Số tiền 1 ly nước " + nuocUong[i] + " là " + money[i]);
+            let inputSoLuong = parseInt(prompt("nhập vào số lượng"));
+            let tong = 0;
+            if (inputSoLuong >0){
+
+                tong =  money[i]*inputSoLuong;
+                alert(tong);
+            }
+            break;
+        }
+    }if (check == false){
+        alert("bạn nhập sai mã");
+
+    }
+</script>
+</body>
+</html>

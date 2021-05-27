@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let input = prompt();
+    let tachChuoi = input.split("");
+    let so = new Array(0,1,2,3,4,5,6,7,8,9);
+    let kitu = new Array("không","một","hai","ba","bốn","năm","sáu","bảy","tám","chín");
+    for (i=0;i<so.length;i++){
+        for(j=0;j<tachChuoi.length;j++){
+            if (tachChuoi[j] == so[i]){
+                document.write(" "+kitu[i]);
+            }
+        }
+    }
+</script>
+</body>
+</html>
